@@ -215,6 +215,8 @@ import com.android.internal.policy.PhoneWindow;
 import com.android.internal.statusbar.IStatusBarService;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.util.ScreenshotHelper;
+import com.android.internal.util.custom.LineageButtons;
+import com.android.internal.util.custom.Utils;
 import com.android.server.ExtconStateObserver;
 import com.android.server.ExtconUEventObserver;
 import com.android.server.GestureLauncherService;
@@ -1934,6 +1936,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 mScreenshotRunnable.setScreenshotType(TAKE_SCREENSHOT_FULLSCREEN);
                 mScreenshotRunnable.setScreenshotSource(SCREENSHOT_KEY_OTHER);
                 mHandler.post(mScreenshotRunnable);
+                break;
+            case CLOSE_APP:
+                Utils.killForegroundApp();
                 break;
             default:
                 break;
