@@ -89,6 +89,7 @@ import com.android.systemui.statusbar.policy.NetworkController;
 import com.android.systemui.statusbar.policy.RemoteInputQuickSettingsDisabler;
 import com.android.systemui.statusbar.policy.UserInfoControllerImpl;
 import com.android.systemui.statusbar.policy.UserSwitcherController;
+import com.android.systemui.tuner.TunerService;
 import com.android.systemui.volume.VolumeComponent;
 
 import com.google.android.systemui.NotificationLockscreenUserManagerGoogle;
@@ -190,6 +191,7 @@ public class StatusBarGoogle extends StatusBar {
             DismissCallbackRegistry dismissCallbackRegistry,
             Lazy<NotificationShadeDepthController> notificationShadeDepthControllerLazy,
             StatusBarTouchableRegionManager statusBarTouchableRegionManager,
+            TunerService tunerService,
             FODCircleViewImpl fodCircleViewImpl) {
         super(context,
                 notificationsController,
@@ -268,6 +270,7 @@ public class StatusBarGoogle extends StatusBar {
                 dismissCallbackRegistry,
                 notificationShadeDepthControllerLazy,
                 statusBarTouchableRegionManager,
+                tunerService,
                 fodCircleViewImpl);
         mSmartSpaceController = smartSpaceController;
     }
