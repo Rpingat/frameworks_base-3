@@ -1928,6 +1928,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case CLOSE_APP:
                 Utils.killForegroundApp();
                 break;
+            case TORCH:
+                toggleFlashLight();
+                break;
             default:
                 break;
         }
