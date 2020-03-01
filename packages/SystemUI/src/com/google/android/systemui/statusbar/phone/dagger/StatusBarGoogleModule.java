@@ -94,9 +94,11 @@ import com.android.systemui.statusbar.policy.BatteryController;
 import com.android.systemui.statusbar.policy.ConfigurationController;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController;
 import com.android.systemui.statusbar.policy.ExtensionController;
+import com.android.systemui.statusbar.policy.FlashlightController;
 import com.android.systemui.statusbar.policy.KeyguardStateController;
 import com.android.systemui.statusbar.policy.NetworkController;
 import com.android.systemui.statusbar.policy.RemoteInputQuickSettingsDisabler;
+import com.android.systemui.statusbar.policy.TaskHelper;
 import com.android.systemui.statusbar.policy.UserInfoControllerImpl;
 import com.android.systemui.statusbar.policy.UserSwitcherController;
 import com.android.systemui.tuner.TunerService;
@@ -203,7 +205,8 @@ public interface StatusBarGoogleModule {
             DismissCallbackRegistry dismissCallbackRegistry,
             StatusBarTouchableRegionManager statusBarTouchableRegionManager,
             TunerService tunerService,
-            FODCircleViewImpl fodCircleViewImpl) {
+            FODCircleViewImpl fodCircleViewImpl,
+            TaskHelper taskHelper) {
         return new StatusBarGoogle(
                 smartSpaceController,
                 context,
@@ -284,6 +287,7 @@ public interface StatusBarGoogleModule {
                 notificationShadeDepthController,
                 statusBarTouchableRegionManager,
                 tunerService,
-                fodCircleViewImpl);
+                fodCircleViewImpl,
+                taskHelper);
     }
 }
