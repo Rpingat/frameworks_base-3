@@ -1931,6 +1931,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case TORCH:
                 toggleFlashLight();
                 break;
+            case VOLUME_PANEL:
+                Utils.toggleVolumePanel(mContext);
+                break;
             default:
                 break;
         }
