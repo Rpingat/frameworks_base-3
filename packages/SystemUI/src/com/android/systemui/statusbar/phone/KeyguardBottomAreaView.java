@@ -117,6 +117,7 @@ public class KeyguardBottomAreaView extends FrameLayout implements View.OnClickL
     private static final Intent PHONE_INTENT = new Intent(Intent.ACTION_DIAL);
     private static final int DOZE_ANIMATION_STAGGER_DELAY = 48;
     private static final int DOZE_ANIMATION_ELEMENT_DURATION = 250;
+    private static final String FOD = "vendor.lineage.biometrics.fingerprint.inscreen";
 
     private final boolean mShowLeftAffordance;
     private final boolean mShowCameraAffordance;
@@ -173,6 +174,8 @@ public class KeyguardBottomAreaView extends FrameLayout implements View.OnClickL
     private int mBurnInXOffset;
     private int mBurnInYOffset;
     private ActivityIntentHelper mActivityIntentHelper;
+
+    PackageManager packageManager = mContext.getPackageManager();
 
     public KeyguardBottomAreaView(Context context) {
         this(context, null);
