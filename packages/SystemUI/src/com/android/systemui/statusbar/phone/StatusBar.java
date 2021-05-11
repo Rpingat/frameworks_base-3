@@ -730,7 +730,6 @@ public class StatusBar extends SystemUI implements DemoMode,
                 mMediaManager.setLockScreenMediaBlurLevel();
             }
             handleCutout(null);
-            }
         }
     }
 
