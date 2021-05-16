@@ -918,7 +918,6 @@ public class StatusBar extends SystemUI implements DemoMode,
         mDismissCallbackRegistry = dismissCallbackRegistry;
         mTunerService = tunerService;
         mFODCircleViewImpl = fodCircleViewImpl;
-        mFlashlightController = flashlightController;
         mTaskHelper = taskHelper;
         mBubbleExpandListener =
                 (isExpanding, key) -> {

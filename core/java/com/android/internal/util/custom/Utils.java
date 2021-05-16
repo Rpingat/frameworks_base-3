@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (C) 2014 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.net.ConnectivityManager;
+import android.media.AudioManager; 
 import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.ServiceManager;
