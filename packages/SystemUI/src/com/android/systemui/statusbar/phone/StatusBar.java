@@ -1121,8 +1121,9 @@ public class StatusBar extends SystemUI implements DemoMode,
         mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
         mCustomSettingsObserver.observe();
         mCustomSettingsObserver.update();
+    }
 
-    private void initCoreOverlays() {
+     private void initCoreOverlays() {
         boolean navbarEnabled = NavbarUtils.isEnabled(mContext);
         if (!navbarEnabled) {
             setNavBarInteractionMode(NAV_BAR_MODE_3BUTTON_OVERLAY);
