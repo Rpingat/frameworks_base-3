@@ -215,8 +215,7 @@ import com.android.internal.policy.PhoneWindow;
 import com.android.internal.statusbar.IStatusBarService;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.util.ScreenshotHelper;
-import com.android.internal.util.custom.LineageButtons;
-import com.android.internal.util.custom.Utils;
+import com.android.internal.util.custom.WaveUtils;
 import com.android.server.ExtconStateObserver;
 import com.android.server.ExtconUEventObserver;
 import com.android.server.GestureLauncherService;
@@ -1926,25 +1925,25 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 mHandler.post(mScreenshotRunnable);
                 break;
             case CLOSE_APP:
-                Utils.killForegroundApp();
+                WaveUtils.killForegroundApp();
                 break;
             case TORCH:
                 toggleFlashLight();
                 break;
             case VOLUME_PANEL:
-                Utils.toggleVolumePanel(mContext);
+                WaveUtils.toggleVolumePanel(mContext);
                 break;
             case CLEAR_ALL_NOTIFICATIONS:
-                Utils.clearAllNotifications();
+                WaveUtils.clearAllNotifications();
                 break;
             case NOTIFICATIONS:
-                Utils.toggleNotifications();
+                WaveUtils.toggleNotifications();
                 break;
             case QS_PANEL:
-                Utils.toggleQsPanel();
+                WaveUtils.toggleQsPanel();
                 break;
             case RINGER_MODES:
-                Utils.toggleRingerModes(mContext);
+                WaveUtils.toggleRingerModes(mContext);
                 break;
             default:
                 break;
@@ -3494,7 +3493,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             if (down) {
                 if (repeatCount == 0) {
                     if (unpinActivity(true)) {
-                        Utils.killForegroundApp();
+                        WaveUtils.killForegroundApp();
                     }
                 } else if (longPress) {
                     if (!keyguardOn && mBackLongPressAction != Action.NOTHING) {

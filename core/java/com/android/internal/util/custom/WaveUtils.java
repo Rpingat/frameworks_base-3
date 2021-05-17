@@ -46,7 +46,7 @@ import java.util.Locale;
 import static android.content.Context.NOTIFICATION_SERVICE;
 import static android.content.Context.VIBRATOR_SERVICE;
 
-public class Utils {
+public class WaveUtils {
 
     private static OverlayManager mOverlayService;
 
