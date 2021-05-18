@@ -834,11 +834,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     toggleFlashLight();
                     break;
                 case MSG_DISPATCH_VOLKEY_WITH_WAKE_LOCK: {
-                    KeyEvent event = (KeyEvent) msg.obj;
+                    KeyEvent kevent = (KeyEvent) msg.obj;
                     mVolBtnLongPress = true;
-                    dispatchMediaKeyWithWakeLockToAudioService(event);
+                    dispatchMediaKeyWithWakeLockToAudioService(kevent);
                     dispatchMediaKeyWithWakeLockToAudioService(
-                            KeyEvent.changeAction(event, KeyEvent.ACTION_UP));
+                            KeyEvent.changeAction(kevent, KeyEvent.ACTION_UP));
                     break;
                 }
                 case MSG_POWER_LONG_PRESS_FOR_HARDWARE_RESET:
